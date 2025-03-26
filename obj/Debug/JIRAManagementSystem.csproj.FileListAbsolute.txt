@@ -1,0 +1,13 @@
+C:\projects\2025\sem6\JIRAManagementSystem\bin\Debug\JIRAManagementSystem.exe.config
+C:\projects\2025\sem6\JIRAManagementSystem\bin\Debug\JIRAManagementSystem.exe
+C:\projects\2025\sem6\JIRAManagementSystem\bin\Debug\JIRAManagementSystem.pdb
+C:\projects\2025\sem6\JIRAManagementSystem\obj\Debug\JIRAManagementSystem.csproj.AssemblyReference.cache
+C:\projects\2025\sem6\JIRAManagementSystem\obj\Debug\JIRAManagementSystem.Activities.resources
+C:\projects\2025\sem6\JIRAManagementSystem\obj\Debug\JIRAManagementSystem.Employees.resources
+C:\projects\2025\sem6\JIRAManagementSystem\obj\Debug\JIRAManagementSystem.Form1.resources
+C:\projects\2025\sem6\JIRAManagementSystem\obj\Debug\JIRAManagementSystem.Projects.resources
+C:\projects\2025\sem6\JIRAManagementSystem\obj\Debug\JIRAManagementSystem.Properties.Resources.resources
+C:\projects\2025\sem6\JIRAManagementSystem\obj\Debug\JIRAManagementSystem.csproj.GenerateResource.cache
+C:\projects\2025\sem6\JIRAManagementSystem\obj\Debug\JIRAManagementSystem.csproj.CoreCompileInputs.cache
+C:\projects\2025\sem6\JIRAManagementSystem\obj\Debug\JIRAManagementSystem.exe
+C:\projects\2025\sem6\JIRAManagementSystem\obj\Debug\JIRAManagementSystem.pdb

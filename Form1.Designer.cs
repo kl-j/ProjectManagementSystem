@@ -36,7 +36,6 @@
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label6
@@ -98,6 +97,7 @@
             this.buttonLogin.TabIndex = 4;
             this.buttonLogin.Text = "LOGIN";
             this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // textBoxUsername
             // 
@@ -124,27 +124,12 @@
             this.panel1.Size = new System.Drawing.Size(55, 445);
             this.panel1.TabIndex = 0;
             // 
-            // buttonClear
-            // 
-            this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(245)))), ((int)(((byte)(50)))));
-            this.buttonClear.Cursor = System.Windows.Forms.Cursors.PanSW;
-            this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonClear.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClear.ForeColor = System.Drawing.Color.Black;
-            this.buttonClear.Location = new System.Drawing.Point(271, 382);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(85, 36);
-            this.buttonClear.TabIndex = 10;
-            this.buttonClear.Text = "CLEAR";
-            this.buttonClear.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(575, 445);
-            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
@@ -171,7 +156,6 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonClear;
     }
 }
 
