@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace JIRAManagementSystem
 {
     public partial class Form1 : Form
     {
+        string connectionString = "Data Source=YOUR_SERVER;Initial Catalog=YOUR_DATABASE;Integrated Security=True";
+
         public Form1()
         {
             InitializeComponent();
@@ -22,22 +25,40 @@ namespace JIRAManagementSystem
 
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (textBoxUsername.Text== "" && textBoxPassword.Text== "")
+            string username = textBoxUsername.Text.Trim();
+            string password = textBoxPassword.Text.Trim();
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Missing Information");
+                MessageBox.Show("Please enter both username and password.");
+                return;
             }
-            else if (textBoxUsername.Text == "admin" && textBoxPassword.Text == "password")
+
+            string query = "SELECT COUNT(*) FROM Users WHERE Username = @username AND Password = @password";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                 Employees employees = new Employees();
-                employees.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Please enter the correct password");
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password); // pllaintext
+
+                conn.Open();
+                int result = (int)cmd.ExecuteScalar();
+
+                if (result > 0)
+                {
+                    // Login successful
+                    MessageBox.Show("Login successful!");
+                    this.Hide();
+                    var Employees = new Employees(); 
+                    Employees.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password.");
+                }
             }
         }
-    }
 }
