@@ -52,8 +52,8 @@ namespace JIRAManagementSystem
                     // Login successful
                     MessageBox.Show("Login successful!");
                     this.Hide();
-                    var Employees = new Employees(); 
-                    Employees.Show();
+                    var Activities = new Activities(); 
+                    Activities.Show();
                 }
                 else
                 {

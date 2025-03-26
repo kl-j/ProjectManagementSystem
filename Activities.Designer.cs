@@ -46,13 +46,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelActivities = new System.Windows.Forms.Label();
+            this.labelProjects = new System.Windows.Forms.Label();
+            this.labelEmployees = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.richTextBoxURL = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -204,9 +206,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(245)))), ((int)(((byte)(50)))));
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labelActivities);
+            this.panel1.Controls.Add(this.labelProjects);
+            this.panel1.Controls.Add(this.labelEmployees);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -224,39 +226,39 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Logout";
             // 
-            // label3
+            // labelActivities
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 278);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Activities";
+            this.labelActivities.AutoSize = true;
+            this.labelActivities.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelActivities.Location = new System.Drawing.Point(51, 278);
+            this.labelActivities.Name = "labelActivities";
+            this.labelActivities.Size = new System.Drawing.Size(85, 19);
+            this.labelActivities.TabIndex = 2;
+            this.labelActivities.Text = "Activities";
             // 
-            // label2
+            // labelProjects
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 220);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Projects";
+            this.labelProjects.AutoSize = true;
+            this.labelProjects.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProjects.Location = new System.Drawing.Point(51, 220);
+            this.labelProjects.Name = "labelProjects";
+            this.labelProjects.Size = new System.Drawing.Size(76, 19);
+            this.labelProjects.TabIndex = 1;
+            this.labelProjects.Text = "Projects";
             // 
-            // label1
+            // labelEmployees
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Employees";
+            this.labelEmployees.AutoSize = true;
+            this.labelEmployees.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmployees.Location = new System.Drawing.Point(51, 158);
+            this.labelEmployees.Name = "labelEmployees";
+            this.labelEmployees.Size = new System.Drawing.Size(96, 19);
+            this.labelEmployees.TabIndex = 0;
+            this.labelEmployees.Text = "Employees";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(524, 116);
+            this.textBox1.Location = new System.Drawing.Point(514, 116);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(46, 20);
             this.textBox1.TabIndex = 74;
@@ -265,7 +267,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(464, 119);
+            this.label5.Location = new System.Drawing.Point(454, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 73;
@@ -288,12 +290,33 @@
             this.textBox2.Size = new System.Drawing.Size(46, 20);
             this.textBox2.TabIndex = 76;
             // 
+            // richTextBoxURL
+            // 
+            this.richTextBoxURL.ForeColor = System.Drawing.SystemColors.Window;
+            this.richTextBoxURL.Location = new System.Drawing.Point(575, 180);
+            this.richTextBoxURL.Name = "richTextBoxURL";
+            this.richTextBoxURL.Size = new System.Drawing.Size(203, 42);
+            this.richTextBoxURL.TabIndex = 77;
+            this.richTextBoxURL.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(572, 163);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "File URL";
+            // 
             // Activities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.richTextBoxURL);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox1);
@@ -345,12 +368,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelActivities;
+        private System.Windows.Forms.Label labelProjects;
+        private System.Windows.Forms.Label labelEmployees;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RichTextBox richTextBoxURL;
+        private System.Windows.Forms.Label label1;
     }
 }

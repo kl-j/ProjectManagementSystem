@@ -12,9 +12,26 @@ namespace JIRAManagementSystem
 {
     public partial class Activities : Form
     {
+        private int rollId;
+        //constructor
+        public Activities(int roleId)
+        {
+            InitializeComponent();
+            rollId = roleId;
+        }
         public Activities()
         {
             InitializeComponent();
+        }
+
+        private void ActivitiesForm_Load(object sender, EventArgs e)
+        {
+            if (rollId == 2)
+            {
+                labelEmployees.Visible = false;
+                labelProjects.Visible = false;
+                labelActivities.Visible = false;
+            }
         }
     }
 }
